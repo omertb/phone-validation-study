@@ -13,7 +13,7 @@
 
     {{ form.phone_number(autocomplete="off", autofocus="true", placeholder="10 Digit Phone Number") }}
 
-    <button id="validateButton" type="submit">Validate</button>
+    <button id="sendButton" type="submit">Send OTP</button>
 </form>
 
 {% for message in get_flashed_messages() %}

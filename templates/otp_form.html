@@ -6,5 +6,17 @@
 </head>
 <body>
 
+<form action="" method="post">
+    {{ form.csrf_token }}
+
+    {{ form.otp_field(autocomplete="off", autofocus="true", placeholder="Enter 6 Digit Number") }}
+
+    <button id="validateButton" type="submit">Validate</button>
+</form>
+
+{% for message in get_flashed_messages() %}
+        {{ message }}
+{% endfor %}
+
 </body>
 </html>
