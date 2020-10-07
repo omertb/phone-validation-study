@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Form</title>
+</head>
+<body>
+
+<form action="" method="post">
+    {{ form.csrf_token }}
+
+    {{ form.username(autocomplete="off", autofocus="true", placeholder="Username") }}
+
+    {{ form.phone_number(autocomplete="off", autofocus="true", placeholder="10 Digit Phone Number") }}
+
+    <button id="validateButton" type="submit">Validate</button>
+</form>
+
+{% for message in get_flashed_messages() %}
+        {{ message }}
+{% endfor %}
+
+</body>
+</html>
